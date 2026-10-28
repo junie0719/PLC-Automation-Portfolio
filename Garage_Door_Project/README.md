@@ -21,7 +21,10 @@ The system controls a warehouse door using automatic object detection and manual
 
 
 
+
 ### Network 1 — Automatic and Manual Opening Request
+![Network 1](Screenshots/n1.png)
+
 
 This network contains two normally open contacts connected in parallel:
 
@@ -37,7 +40,9 @@ This allows either automatic detection or manual operation to request opening.
 
 If an object is detected while the door is closing, this network cancels the closing request and activates the opening request.
 
+
 ### Network 2 — Opening Motor Control
+![Network 2](Screenshots/n2.png)
 
 This network controls `Door_Open_Motor`.
 
@@ -55,6 +60,7 @@ When the door reaches its fully open position, `Door_Open_Limit` becomes active 
 The closing motor interlock helps prevent both motors from operating simultaneously.
 
 ### Network 3 — Automatic Closing Timer
+![Network 3](Screenshots/n3.png)
 
 This network uses two contacts connected in series:
 
@@ -74,6 +80,8 @@ Once the object sensor becomes clear again, the timer can restart.
 After five continuous seconds with the door fully open and the sensor clear, the timer completes.
 
 ### Network 4 — Automatic and Manual Closing Request
+![Network 4](Screenshots/n4.png)
+
 
 This network provides two ways to request closing.
 
@@ -90,7 +98,8 @@ When either closing condition is active and the object sensor is clear, the netw
 
 This allows the system to transition from the opening stage to the closing stage.
 
-Network 5 — Closing Motor Control
+### Network 5 — Closing Motor Control
+![Network 5](Screenshots/n5.png)
 
 This network controls `Door_Close_Motor`.
 
@@ -108,7 +117,9 @@ The opening motor contact provides an interlock against simultaneous motor opera
 
 Object detection is handled by Network 1, which cancels `Close_Request` and sets `Open_Request`.
 
+
 ### Network 6 — Door Open Indicator
+![Network 6](Screenshots/n6.png)
 
 This network controls `Door_Open_Lamp`.
 
@@ -118,8 +129,9 @@ When the door reaches the fully open position, the lamp turns ON.
 
 When the door moves away from the fully open position, the lamp turns OFF.
 
-### Network 7 — Reset Closing Request
 
+### Network 7 — Reset Closing Request
+![Network 7](Screenshots/n7.png)
 The final network uses the normally open `Door_Close_Limit` contact to activate a RESET coil for `Close_Request`.
 
 When the door reaches the fully closed position, `Close_Request` is reset to 0.

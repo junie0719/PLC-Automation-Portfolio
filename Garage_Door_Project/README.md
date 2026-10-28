@@ -1,10 +1,10 @@
-# Automatic Warehouse Door Control — PLC Ladder Logic
+# Automatic Garage Door Control — PLC Ladder Logic
 
 ## Project Overview
 
 This project demonstrates an Automatic Garage Door Control System developed using LADX PLC Ladder Logic Simulator.
 
-The system controls a warehouse door using automatic object detection and manual open/close commands. It uses limit switches to determine the door position, a timer to control automatic closing, and interlocking logic to prevent conflicting motor commands.
+The system controls a GARAGE door using automatic object detection and manual open/close commands. It uses limit switches to determine the door position, a timer to control automatic closing, and interlocking logic to prevent conflicting motor commands.
 
 
 ## Features
